@@ -11,13 +11,18 @@
 
 	nav {
 		font-size: 1.5rem;
-		width: 45%;
-		.flex-box(space-between, center);
+		width: 65%;
+		.flex-box(space-evenly, center);
 		padding: 15px;
 
 		a {
 			color: @nav-font;
 			text-decoration: none;
+		}
+
+		@media @phone {
+			width: 100%;
+			// background: green;
 		}
 	}
 }
