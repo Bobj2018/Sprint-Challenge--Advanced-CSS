@@ -1,8 +1,12 @@
 // Navigation code here
 .nav-header {
+	position: sticky;
+	top: 0;
+	width: 100vw;
+	opacity: 0.9;
 	background: @nav-bg;
 	.flex-box(center, center, column);
-	border-bottom: @nav-border solid 1px;
+	border-bottom: @nav-border solid 3px;
 	padding: 15px;
 	padding-bottom: 0;
 	h1 {
@@ -18,6 +22,15 @@
 		a {
 			color: @nav-font;
 			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+
+			@media @phone {
+				&:hover {
+					text-decoration: none;
+				}
+			}
 		}
 
 		@media @phone {

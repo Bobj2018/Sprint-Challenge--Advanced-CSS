@@ -161,12 +161,16 @@ p {
   margin: 0 auto;
 }
 .nav-header {
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  opacity: 0.9;
   background: #f6f6f6;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  border-bottom: #f1f1f1 solid 1px;
+  border-bottom: #f1f1f1 solid 3px;
   padding: 15px;
   padding-bottom: 0;
 }
@@ -185,6 +189,14 @@ p {
 .nav-header nav a {
   color: #454a59;
   text-decoration: none;
+}
+.nav-header nav a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 500px) {
+  .nav-header nav a:hover {
+    text-decoration: none;
+  }
 }
 @media (max-width: 500px) {
   .nav-header nav {
@@ -279,6 +291,7 @@ footer {
   /* Internet Explorer/Edge */
 }
 .home .walk .walk-text .btn:hover {
+  transition: background 0.5s, color 0.5s;
   background: #f6f7f8;
   color: #22283a;
   border: #dee2e6 solid 1px;
