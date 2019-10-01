@@ -1,1 +1,41 @@
 // Navigation code here
+.nav-header {
+	position: sticky;
+	top: 0;
+	width: 100vw;
+	opacity: 0.9;
+	background: @nav-bg;
+	.flex-box(center, center, column);
+	border-bottom: @nav-border solid 3px;
+	padding: 15px;
+	padding-bottom: 0;
+	h1 {
+		font-size: 4rem;
+	}
+
+	nav {
+		font-size: 1.5rem;
+		width: 65%;
+		.flex-box(space-evenly, center);
+		padding: 15px;
+
+		a {
+			color: @nav-font;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+
+			@media @phone {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		@media @phone {
+			width: 100%;
+			// background: green;
+		}
+	}
+}

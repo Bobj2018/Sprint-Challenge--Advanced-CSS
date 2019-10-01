@@ -1,1 +1,39 @@
 // Mixins Here
+.flex-box(@justify,@align,@direction:row,@wrap:nowrap) {
+	display: flex;
+	flex-flow: @direction @wrap;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+.disable-select() {
+	user-select: none; /* supported by Chrome and Opera */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.btn-primary(@color, @background) {
+	margin: 1%;
+	color: @color;
+	background: @background;
+	width: 110px;
+	padding: 8px;
+	border-radius: 5px;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	border: white solid 1px;
+	.disable-select(); //disable text selection
+
+	&:hover {
+		transition: background 0.5s, color 0.5s;
+		background: @color;
+		color: @background;
+		border: @border-real solid 1px;
+
+		//
+	}
+}
